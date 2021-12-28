@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="css/styleAd.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body id="bod">
+    <header>
+      <div class="titles">
+        <h4 id="g1">Google</h4>
+        <h4 id="g2">Advanced Search</h4>
+      </div>
+      <div class="headerL">
+        <a class="links" href="index.html">Google Search</a>
+        <a class="links" href="image-search.html">Image Search</a>
+        <div class="divI">
+          <div id="iu1" class="iu">
+            <img id="apps" src="img/apps.svg" alt="Google Apps" />
+          </div>
+          <div id="iu2" class="iu">
+            <img id="acc" src="img/icon.png" alt="Google Account" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="total">
+      <div id="grds">
+        <p class="ana">Find pages with...</p>
+        <div id="all">
+          <form action="https://www.google.com.br/search" target="_blank">
+            <div id="forms">
+              <div class="cad">
+                <label for="1">all theses words:</label>
+                <input class="pi" type="search" name="as_q" />
+              </div>
+
+              <div class="cad">
+                <label for="1">this exact word or phrase:</label>
+                <input class="pi" type="text" name="as_epq" />
+              </div>
+
+              <div class="cad">
+                <label for="1">any of these words:</label>
+                <input class="pi" type="text" name="as_oq" />
+              </div>
+
+              <div class="cad">
+                <label for="1">none of these words:</label>
+                <input class="pi" type="text" name="as_eq" />
+              </div>
+            </div>
+            <input id="search" type="submit" value="Advanced Search" />
+          </form>
+        </div>
+      </div>
+
+      <div id="second">
+        <p class="ana">To do this in the search box.</p>
+        <div class="com">
+          <ul>
+            <li id="a1" class="po">
+              Type the important words: <b>tri-colour rat terrier</b>
+            </li>
+            <li id="a2" class="po">
+              Put exact words in quotes: <b>"rat terrier"</b>
+            </li>
+            <li id="a3" class="po">
+              Type <b>OR</b> between all the words you want:
+              <b>miniature OR standard</b>
+            </li>
+            <li id="a4" class="po">
+              Put a minus sign just before words that you don't want:
+              <b>-rodent, -"Jack Russell"</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div id="oia">
+        <h5>Brazil</h5>
+        <div class="uls">
+          <ul id="ul2">
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Settings</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

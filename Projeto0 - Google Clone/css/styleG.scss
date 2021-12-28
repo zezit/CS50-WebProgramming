@@ -1,0 +1,244 @@
+$bg-color: #202124; /* BACKGROUNG COLOR */
+$tx-color: white; /* TEXT COLOR */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color;
+  color: $tx-color;
+  font-family: Arial, Helvetica, sans-serif;
+  // HEARDER
+  .header {
+    height: 10%;
+    .header_div1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 15px;
+      // ACCOUNT ICON
+      #acc {
+        height: 35px;
+        width: 35px;
+      }
+      // APPS ICON
+      #apps {
+        height: 30px;
+        width: 30px;
+      }
+      // ALL ICONS CONFIGS
+      .icons {
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 5px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+      .icons:hover {
+        background: rgba(114, 114, 111, 0.37);
+        cursor: pointer;
+      }
+      // LINKS CONFIGS
+      .links {
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: $tx-color;
+        padding-right: 15px;
+      }
+      .links:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .main {
+    position: relative;
+    width: 100%;
+    margin-top: 4%;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // SEARCH BAR
+    #search_input {
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3%;
+        input {
+          width: 600px;
+          height: 45px;
+          border: 0.5px solid rgba(255, 255, 255, 0.384);
+          border-radius: 350px;
+          background: none;
+          background-image: url("../img/lup.svg");
+          background-position: 11px 12px;
+          background-repeat: no-repeat;
+          background-size: 22px;
+          padding: 7px 10px 10px 40px;
+          color: white;
+          font-size: 16px;
+          font-family: arial, sans-serif;
+        }
+        input:hover {
+          background: rgb(49, 49, 49);
+          background-image: url("../img/lup.svg");
+          background-position: 11px 12px;
+          background-repeat: no-repeat;
+          background-size: 22px;
+          padding: 7px 10px 10px 40px;
+        }
+        // GOOGLE SEARCH BUTTON
+        button {
+          margin-top: 5%;
+          align-self: center;
+          background: #3a3b3f;
+          border: none;
+          border-radius: 3px;
+          color: white;
+          margin-right: 30%;
+          width: 140px;
+          height: 39px;
+          font-size: 15px;
+          font-family: arial, sans-serif;
+        }
+        button:hover {
+          cursor: pointer;
+          border: 0.5px solid rgba(255, 255, 255, 0.384);
+        }
+      }
+      // LUCKY BUTTON
+      #lucky_button {
+        button {
+          position: absolute;
+          align-self: center;
+          background: #3a3b3f;
+          border: none;
+          border-radius: 3px;
+          color: white;
+          left: 50%;
+          bottom: 0;
+          width: 140px;
+          height: 39px;
+          font-size: 15px;
+          font-family: arial, sans-serif;
+        }
+        button:hover {
+          cursor: pointer;
+          border: 0.5px solid rgba(255, 255, 255, 0.384);
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    background: rgb(21, 21, 21);
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.97rem;
+    color: #a3a5ad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #footer_div {
+      width: 100%;
+      // COUNTRY NAME
+      h5 {
+        padding: 17px 27px;
+        border-bottom: 0.3px solid #4a4b50;
+      }
+      // LAST PAGE INFORMATIN
+      .first_ulDivs {
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          padding-right: 20px;
+        }
+        li:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        #ul1 {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 17px 50px;
+          li {
+            padding-bottom: 15px;
+          }
+        }
+        #ul2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          list-style: none;
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+}
+
+// REDUCE LOGO AND SEARCH BAR AND RE-ORGANIZE SOME THINGS
+@media (max-width: 620px) {
+  body {
+    .main {
+      margin-top: 0;
+      #logo_Google {
+        width: 375px;
+      }
+      #search_input {
+        .form {
+          input {
+            width: 430px;
+          }
+          button {
+            position: absolute;
+            right: 25%;
+            top: 100%;
+          }
+        }
+        button {
+          position: absolute;
+          right: 25%;
+          top: 111%;
+        }
+      }
+    }
+    .footer {
+      .uls {
+        display: inline-block;
+        #ul1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        #ul2 {
+          display: flex;
+          margin: 0 auto;
+          padding-left: 10%;
+          padding-bottom: 17px;
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+}

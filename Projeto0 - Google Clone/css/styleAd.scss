@@ -1,0 +1,261 @@
+$bg-color: #202124; /* BACKGROUNG COLOR */
+$tx-color: rgba(245, 245, 245, 0.692); /* TEXT COLOR */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color !important;
+  font-family: Arial, Helvetica, sans-serif;
+  header {
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.192);
+
+    .titles {
+      padding-left: 20px;
+      #g1 {
+        color: white;
+        margin-top: 15px;
+      }
+      #g2 {
+        color: rgb(233, 126, 126);
+        padding-top: 35px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+      }
+    }
+    .headerL {
+      margin-top: 15px;
+      margin-right: 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      .links {
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: white;
+        padding-right: 15px;
+      }
+      .links:hover {
+        text-decoration: underline;
+      }
+      .divI {
+        display: flex;
+        align-items: center;
+      }
+      #acc {
+        height: 35px;
+        width: 35px;
+      }
+      #apps {
+        height: 30px;
+        width: 30px;
+      }
+      .iu {
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 5px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+      .iu:hover {
+        background: rgba(114, 114, 111, 0.37);
+        cursor: pointer;
+      }
+    }
+  }
+  /*-END HEADER-*/
+  main {
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    display: flex;
+    align-content: center;
+    width: 75%;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    padding: 45px 40px;
+    /*Todo conteúdo*/
+    .ana {
+      // width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: normal;
+      #comns {
+        margin-right: 110px;
+      }
+    }
+    #grds {
+      #all {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /*Espaço de pesquisa*/
+        #forms {
+          display: flex;
+          flex-direction: column;
+          .cad {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            input {
+              color: whitesmoke;
+              border: 0.5px solid rgba(255, 255, 255, 0.473);
+              border-radius: 3px;
+              background: none;
+              width: 580px;
+              height: 30px;
+              padding-left: 10px;
+            }
+          }
+          label {
+            margin-right: 10px;
+          }
+        }
+        #search {
+          border: none;
+          border-radius: 4px;
+          background: #8ab4f8;
+          color: black;
+          display: block;
+          align-items: center;
+          justify-items: center;
+          margin-top: 20px;
+          margin-left: 83%;
+          width: 125px;
+          height: 32px;
+        }
+        #search:hover {
+          background: #aecbfa;
+          cursor: default;
+        }
+      }
+    }
+    #second {
+      .com {
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.671);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        .po {
+          margin-bottom: 28px;
+        }
+        ul {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(21, 21, 21, 0.836);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    color: #a3a5ad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #oia {
+      width: 100%;
+      h5 {
+        font-size: 0.9rem;
+        padding: 20px 40px;
+        border-bottom: 0.3px solid #4a4b50;
+      }
+      .uls {
+        padding: 10px 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          padding-right: 20px;
+        }
+        li:hover {
+          cursor: pointer;
+          text-decoration: none;
+          color: whitesmoke;
+        }
+        #ul2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          list-style: none;
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+}
+
+// REDUCE LOGO AND SEARCH BAR AND RE-ORGANIZE SOME THINGS
+@media (max-width: 1440px) {
+  #total {
+    display: flex;
+    align-content: center;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1280px) {
+  #total {
+    display: flex;
+    align-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  #second {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #grds {
+    #all {
+      #forms {
+        width: 100%;
+        .cad {
+          margin-bottom: 40px;
+          .pi {
+            position: absolute;
+            left: 40%;
+            width: 250px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    #search {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 6%;
+    }
+  }
+  main {
+    padding: 0;
+  }
+}
